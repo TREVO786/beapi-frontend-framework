@@ -17,7 +17,8 @@
     "composerjs": "cd composerjs && npm install && node app.js",
     "favicon": "node scripts/favicon.js && node scripts/favicon.js --appicon",
     "icon": "node scripts/svg-sprite.js",
-    "image": "node scripts/image-sizes.js"
+    "image": "node scripts/image-sizes.js",
+    "live": "node_modules/.bin/concurrently -k -n \"Webpack,Live Server\" -p \"[{name}]\" -c \"green, blue\" \"node_modules/.bin/webpack --mode=none --watch\""
   },
   "license": "GPL-2.0",
   "devDependencies": {

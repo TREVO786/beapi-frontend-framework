@@ -179,6 +179,49 @@ module.exports = (env, argv) => {
     )
   }
 
+  if (argv.mode === 'none') {
+    webpackConfig.devtool = 'source-map'
+    webpackConfig.output.filename = '[name].js'
+    webpackConfig.plugins.push(
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+        allChunks: true,
+      }),
+      new BrowserSyncPlugin(
+        {
+          proxy: config.liveServer,
+          https: config.liveHttps,
+          serveStatic: [
+            {
+              route: config.liveServerRoute,
+              dir: 'dist/assets',
+            },
+          ],
+          files: [
+            {
+              match: config.liverefresh,
+              fn: function(event, file) {
+                const bs = require('browser-sync').get('bs-webpack-plugin')
+                if (event === 'change' && file.indexOf('.css') === -1) {
+                  bs.reload()
+                }
+                if (event === 'change' && file.indexOf('.css') !== -1) {
+                  bs.stream()
+                }
+              },
+            },
+          ],
+          startPath: '/',
+          notify: true,
+        },
+        {
+          reload: false,
+          injectCss: true,
+        }
+      )
+    )
+  }
+
   if (argv.mode === 'production') {
     webpackConfig.optimization.minimizer = [
       new OptimizeCssAssetsPlugin({

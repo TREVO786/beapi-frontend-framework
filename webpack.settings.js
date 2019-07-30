@@ -15,4 +15,8 @@ module.exports = {
     'dist/assets/img/icons/',
     'dist/assets/img/icons/*.svg',
   ],
+  liveHttps: true,
+  liveServer: 'https://autocar-location.beapi.space',
+  liveServerRoute: '/content/themes/autocar-location/dist/assets',
+  liverefresh: ['dist/assets/app.css', 'dist/assets/*.js'],
 }
