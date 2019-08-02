@@ -211,7 +211,7 @@ module.exports = (env, argv) => {
               },
             },
           ],
-          startPath: '/',
+          startPath: config.liveStartDir,
           notify: true,
         },
         {
