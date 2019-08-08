@@ -32,6 +32,27 @@
         "img_base": "img-200-200"
       }
     ],
+    "hero-bkg": [
+      {
+        "srcsets": [
+          {
+            "srcset": "",
+            "size": "img-750-420"
+          },
+          {
+            "size": "img-024-576"
+          },
+          {
+            "size": "img-1323-744"
+          },
+          {
+            "size": "img-1960-1080"
+          }
+        ],
+        "default_img": "default-1960-1080.jpg",
+        "img_base": "img-1960-1080"
+      }
+    ],
     "square": [
       {
         "srcsets": [

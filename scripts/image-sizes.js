@@ -3,7 +3,7 @@ const ora = require('ora')
 const Json2csvParser = require('json2csv').Parser
 const fields = ['location', 'sizes.width', 'sizes.height', 'sizes.retina', 'sizes.ratio']
 
-const CONF_IMG_DIR = './src/conf-img'
+const CONF_IMG_DIR = './src/img'
 const IGNORED_TPL = 'default-picture.tpl'
 const LOCATIONS_FILENAME = 'image-locations.json'
 const SIZES_FILENAME = 'image-sizes.json'

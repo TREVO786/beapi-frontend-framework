@@ -20,6 +20,26 @@
       "height": "200",
       "crop": true
     },
+    "img-750-420": {
+      "width": "750",
+      "height": "420",
+      "crop": true
+    },
+    "img-024-576": {
+      "width": "024",
+      "height": "576",
+      "crop": true
+    },
+    "img-1323-744": {
+      "width": "1323",
+      "height": "744",
+      "crop": true
+    },
+    "img-1960-1080": {
+      "width": "1960",
+      "height": "1080",
+      "crop": true
+    },
     "img-400-400": {
       "width": "400",
       "height": "400",

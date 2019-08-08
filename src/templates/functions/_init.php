@@ -1,7 +1,7 @@
 <?php
 require dirname( __FILE__ ) . '/url.php';
 
-define( 'ARI_JSON_DIR', dirname( __FILE__ ) . '/../../src/conf-img/' );
+define( 'ARI_JSON_DIR', dirname( __FILE__ ) . '/../../src/img/' );
 define( 'ARI_MODE', 'picture_lazyload' );
 define( 'ARI_CONTEXT', 'front' );
 define( 'ARI_PIXEL', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' );
