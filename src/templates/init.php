@@ -1,7 +1,7 @@
 <?php
 require( dirname( __FILE__ ) . '/functions/_init.php' );
 
-function includeWithVariables($filePath, $variables = array(), $print = true)
+function includeWithVariables($filePath, $variables = array(), $print = true, $nbInclude = 1)
 {
     // allow unique variable as string
     if (gettype($variables) === 'string') {
@@ -16,8 +16,10 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
         // Start output buffering
         ob_start();
 
-        // Include the template file
-        include $filePath;
+        for ($i = 0; $i < $nbInclude; $i++) {
+            // Include the template file
+            include $filePath;
+        }
 
         // End buffering and return its contents
         $output = ob_get_clean();
@@ -29,13 +31,13 @@ function includeWithVariables($filePath, $variables = array(), $print = true)
 }
 
 // shortcut for including partials/ files
-function get_partials($file, $variables = array(), $print = true) {
-    return includeWithVariables('partials/'.$file.'.php', $variables, $print);
+function get_partials($file, $variables = array(), $nbInclude = 1, $print = true) {
+    includeWithVariables('partials/'.$file.'.php', $variables, $print, $nbInclude);
 }
 
 // shortcut for including cards/ files
-function get_cards($file, $variables = array(), $print = true) {
-    return includeWithVariables('cards/'.$file.'.php', $variables, $print);
+function get_cards($file, $variables = array(), $nbInclude = 1, $print = true) {
+    includeWithVariables('cards/'.$file.'.php', $variables, $print, $nbInclude);
 }
 
 // random lorem size of lorem ipsum
