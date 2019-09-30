@@ -3,8 +3,13 @@ require( dirname( __FILE__ ) . '/functions/_init.php' );
 
 function includeWithVariables($filePath, $variables = array(), $print = true, $nbInclude = 1)
 {
-    // allow unique variable as string
-    if (gettype($variables) === 'string') {
+    // if $variables is integer switch with $nbInclude
+    if (gettype($variables) === 'integer') {
+        $nbInclude = $variables;
+        $variables = array();
+    }
+    // else convert other types as array 
+    elseif (gettype($variables) !== 'array') {
         $variables = array('variable' => $variables);
     }
 
