@@ -55,7 +55,7 @@ function get_lorem($min = 0, $max = INF, $print = true, $wrapBefore = '', $wrapA
 
     // shift var if $print is a string
     if (gettype($print) === 'string') {
-        // $wrapAfter can be ommit
+        // $wrapAfter can be omitted
         if (gettype($wrapAfter) === 'string') {
             $wrapAfter = 1;
         }
