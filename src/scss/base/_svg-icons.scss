@@ -92,6 +92,12 @@
     fill: currentColor;
 	height: 1em;
 	width: 1em;
+
+	&-right,
+	&-left {
+		width: 0.58em;
+		height: 0.75em;
+	}
 }
 
 //display hidden text for icon only button
