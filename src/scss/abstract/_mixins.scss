@@ -277,8 +277,7 @@
 			rgba(0, 0, 0, 0) calc(#{$flexcolsize} - #{$gutter}),
 			rgba(0, 0, 0, 0) calc(#{$flexcolsize})
 		  );
-		  background-size: calc(100% + #{$gutter}) 100%,
-			calc(100% + #{$gutter}) 100%;
+		  background-size: calc(100% + #{$gutter}) 100%;
 		}
 	  }
 
@@ -298,8 +297,7 @@
 			rgba(0, 0, 0, 0) 1px,
 			rgba(0, 0, 0, 0) #{$baseline}
 		  );
-		  background-size: calc(100% + #{$gutter}) 100%,
-			calc(100% + #{$gutter}) 100%;
+		  background-size: calc(100% + #{$gutter}) 100%;
 		}
 	  }
 	}
