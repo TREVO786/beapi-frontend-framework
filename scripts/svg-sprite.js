@@ -58,7 +58,7 @@ const createDir = async dir => {
   }
 }
 
-const optimizeIcons = async (src, optimize) => {
+const optimizeIcons = async (src, dist, optimize) => {
   if (!optimize) {
     return false
   }
@@ -74,14 +74,14 @@ const optimizeIcons = async (src, optimize) => {
         fs.readFile(filepath, 'utf8', (err, data) => {
           if (err) throw err
           svgo.optimize(data, { path: filepath }).then(result => {
-            fs.writeFileSync(filepath, result.data)
+            fs.writeFileSync(`${dist}/${file}`, result.data)
           })
         })
       }
     })
   })
 }
-
+/*
 const generateSprite = async (src, dist, name, prefix) => {
   const sprites = svgstore()
   fs.readdir(src, (err, files) => {
@@ -97,6 +97,7 @@ const generateSprite = async (src, dist, name, prefix) => {
     fs.writeFileSync(`${dist}/${name}`, svg)
   })
 }
+*/
 
 const asyncForEach = async (array, callback) => {
   for (let index = 0; index < array.length; index++) {
@@ -108,8 +109,8 @@ const init = async () => {
   asyncForEach(icons, async icon => {
     const spinner = ora(`Generation SVG sprite for ${icon.id}`).start()
     await createDir(icon.dist)
-    await optimizeIcons(icon.src, icon.optimize)
-    await generateSprite(icon.src, icon.dist, icon.filename, icon.prefix)
+    await optimizeIcons(icon.src, icon.dist, icon.optimize)
+    // await generateSprite(icon.src, icon.dist, icon.filename, icon.prefix)
     spinner.succeed(`Sprite for ${icon.id} has been generated in ${`${icon.dist}/${icon.filename}`}`)
   })
 }
