@@ -71,15 +71,11 @@
 			</ul>
 			<div id="js-menu-trigger" class="menu-trigger">
 				<button type="button" id="js-menu-open" class="menu-trigger__open button button--primary">
-					<svg class="icon icon-menu" focusable="false" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu"></use>
-					</svg>
+					<?php the_icon('menu');?>
 					Menu
 				</button>
 				<button type="button" id="js-menu-close" class="menu-trigger__close button button--primary">
-					<svg class="icon icon-close" focusable="false" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-					</svg>
+					<?php the_icon('close');?>
 					Fermer
 				</button>
 			</div>
@@ -88,9 +84,7 @@
 					<div class="header__logo">
 						<a href="01-home.php" class="header__logo-link">
 							<!-- <?php //echo get_the_post_thumbnail( 0, 'logo-beapi', array( 'data-location' => 'header-logo', 'class' => 'header__img', 'alt' => 'Logo' ) ); ?>  -->
-							<svg class="header__icon icon"  focusable="false" aria-hidden="true" role="img">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-							</svg>
+							<?php the_icon('logo-beapi');?>
 							<?php if ( $bodyClass == 'home' ) :?>
 								<h1 class="header__title visuallyhidden">BeAPI FrontEnd Framework</h1>
 							<?php else: ?>

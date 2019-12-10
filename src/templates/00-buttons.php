@@ -48,27 +48,13 @@
 
 				<p>
 					<h3>Buttons + Icons</h3>
-					<button type="button" class="button">Default Button <svg class="button__icon icon icon-close" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-					</svg></button>
-					<button type="button" class="button button--primary">Primary Button <svg class="button__icon icon icon-close" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-					</svg></button>
-					<button type="button" class="button button--error">Error Button <svg class="button__icon icon icon-close" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-					</svg></button>
-					<button type="button" class="button button--warning">Warning Button <svg class="button__icon icon icon-close" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-					</svg></button>
-					<button type="button" class="button button--success">Success Button <svg class="button__icon icon icon-close" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-					</svg></button>
-					<button type="button" class="button button--info">Info Button <svg class="button__icon icon icon-close" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-					</svg></button>
-					<button type="button" class="button button--transparent">Transparent Button <svg class="button__icon icon icon-close" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-					</svg></button>
+					<button type="button" class="button">Default Button <?php the_icon('close');?></button>
+					<button type="button" class="button button--primary">Primary Button <?php the_icon('close');?></button>
+					<button type="button" class="button button--error">Error Button <?php the_icon('close');?></button>
+					<button type="button" class="button button--warning">Warning Button <?php the_icon('close');?></button>
+					<button type="button" class="button button--success">Success Button <?php the_icon('close');?></button>
+					<button type="button" class="button button--info">Info Button <?php the_icon('close');?></button>
+					<button type="button" class="button button--transparent">Transparent Button <?php the_icon('close');?></button>
 				</p>
 
 				<p>
@@ -143,34 +129,22 @@
 					</p>
 					<p>
 						<button type="button" class="button button--circle">
-							<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-							</svg>
+							<?php the_icon('logo-beapi');?>
 						</button>
 						<button type="button" class="button button--circle button--primary">
-							<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-							</svg>
+							<?php the_icon('logo-beapi');?>
 						</button>
 						<button type="button" class="button button--circle button--error">
-							<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-							</svg>
+							<?php the_icon('logo-beapi');?>
 						</button>
 						<button type="button" class="button button--circle button--warning">
-							<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-							</svg>
+							<?php the_icon('logo-beapi');?>
 						</button>
 						<button type="button" class="button button--circle button--success">
-							<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-							</svg>
+							<?php the_icon('logo-beapi');?>
 						</button>
 						<button type="button" class="button button--circle button--info">
-							<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-							</svg>
+							<?php the_icon('logo-beapi');?>
 						</button>
 					</p>
 				</p>
@@ -187,34 +161,22 @@
 				</p>
 				<p>
 					<a href="#" class="button button--circle">
-						<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-						</svg>
+						<?php the_icon('logo-beapi');?>
 					</a>
 					<a href="#" class="button button--circle button--primary">
-						<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-						</svg>
+						<?php the_icon('logo-beapi');?>
 					</a>
 					<a href="#" class="button button--circle button--error">
-						<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-						</svg>
+						<?php the_icon('logo-beapi');?>
 					</a>
 					<a href="#" class="button button--circle button--warning">
-						<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-						</svg>
+						<?php the_icon('logo-beapi');?>
 					</a>
 					<a href="#" class="button button--circle button--success">
-						<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-						</svg>
+						<?php the_icon('logo-beapi');?>
 					</a>
 					<a href="#" class="button button--circle button--info">
-						<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-						</svg>
+						<?php the_icon('logo-beapi');?>
 					</a>
 				</p>
 			</p>
@@ -228,9 +190,7 @@
 				<hr>
 				<a class="button button--icon" href="https://beapi.fr">
 					<span class="visuallyhidden">Be API</span>
-					<svg class="icon icon-logo-beapi" aria-hidden="true" role="img">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo-beapi"></use>
-					</svg>
+					<?php the_icon('logo-beapi');?>
 				</a>
 			</p>
 		</div>

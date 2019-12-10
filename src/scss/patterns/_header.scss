@@ -11,14 +11,13 @@
 
 	&__logo-link {
 		display: block;
-	}
-
-	&__icon {
-		display: block;
-		height: 50px;
-		width: 50px;
-		margin: 0 auto 10px;
-		color: $textcolor;
+		.icon {
+			display: block;
+			height: 50px;
+			width: 50px;
+			margin: 0 auto 10px;
+			color: $textcolor;
+		}
 	}
 
 	&__img {

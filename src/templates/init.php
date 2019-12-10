@@ -33,9 +33,9 @@ function get_the_icon($fileName, $force = false, $path = 'assets/img/icons/') {
     $keyExists = array_key_exists($path.$fileName, $the_iconStorage);
 
     if ( $keyExists && $force === false) {
-        $output = '<svg class="icon icon-'.$fileName.'" aria-hidden="true" role="img">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-'.$fileName.'"></use>
-        </svg>';
+        $output = '<svg class="icon icon-'.$fileName.' '.$class.'" aria-hidden="true" role="img">
+                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-'.$fileName.'"></use>
+                   </svg>';
     }
 
     else {
