@@ -1,9 +1,9 @@
 const fs = require('fs')
 const path = require('path')
-const svgstore = require('svgstore')
+// const svgstore = require('svgstore')
 const SVGO = require('svgo')
 const ora = require('ora')
-const cheerio = require('cheerio')
+// const cheerio = require('cheerio')
 
 const svgoPlugins = [
   { cleanupAttrs: true },
