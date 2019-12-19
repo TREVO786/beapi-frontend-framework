@@ -79,14 +79,14 @@ if( !$title ) { $title = cleanTitle(basename(dirname(__FILE__))); }
 		.block a { display: block; padding: 10px 15px; transition: all 0.35s; }
 		.block a:hover { text-decoration: none; background: #efefef; }
 
-		.jpg, .jpeg, .gif, .png { background-position: -50px 0 !important; } 
-		.pdf { background-position: -100px 0 !important; }  
+		.jpg, .jpeg, .gif, .png { background-position: -50px 0 !important; }
+		.pdf { background-position: -100px 0 !important; }
 		.txt, .rtf { background-position: -150px 0 !important; }
-		.xls, .xlsx { background-position: -200px 0 !important; } 
-		.ppt, .pptx { background-position: -250px 0 !important; } 
+		.xls, .xlsx { background-position: -200px 0 !important; }
+		.ppt, .pptx { background-position: -250px 0 !important; }
 		.doc, .docx { background-position: -300px 0 !important; }
 		.zip, .rar, .tar, .gzip { background-position: -350px 0 !important; }
-		.swf { background-position: -400px 0 !important; } 
+		.swf { background-position: -400px 0 !important; }
 		.fla { background-position: -450px 0 !important; }
 		.mp3 { background-position: -500px 0 !important; }
 		.wav { background-position: -550px 0 !important; }
@@ -99,11 +99,25 @@ if( !$title ) { $title = cleanTitle(basename(dirname(__FILE__))); }
 		.html, .xhtml, .dhtml, .php, .asp, .css, .js, .inc { background-position: -900px 0 !important; }
 		.dir { background-position: -950px 0 !important; }
 		.sub { margin-left: 20px; border-left: solid 1px #ECE9E9; display: none; }
+		.color__grid{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 20px;
+		}
+		.color__box {height: 5em; padding: 1em; border: 1px solid rgba(0,0,0,0.05) }
+		.color__box span{color: white;}
+		.color__name{ padding-top: .5em;}
+		.color__hex{ color:gray;}
 	</style>
 </head>
 <body>
 <h1><?php echo $title ?></h1>
 <div class="wrap">
+	<?php include 'functions/scss-colors.php';
+	grab_color("_colors.scss","../../src/scss/abstract/");
+	?>
+
+
 <?php
 
 // FUNCTIONS TO MAKE THE MAGIC HAPPEN, BEST TO LEAVE THESE ALONE
@@ -253,7 +267,7 @@ build_blocks( $items, false );
 
 <?php if($toggle_sub_folders) { ?>
 <script>
-	$(document).ready(function() 
+	$(document).ready(function()
 	{
 		$("a.dir").click(function(e)
 		{
@@ -265,5 +279,7 @@ build_blocks( $items, false );
 <?php } ?>
 </div>
 <div style="padding: 10px 10px 40px 10px;"><a href="https://halgatewood.com/free/file-directory-list/">Free PHP File Directory Script</a> (<a href="https://github.com/halgatewood/file-directory-list/">GitHub</a>)</div>
+
+
 </body>
 </html>
