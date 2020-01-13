@@ -11,7 +11,8 @@
 			c = c.replace(/no-js/, 'js');
 			document.documentElement.className = c;
 		})();
-		//]]>
+        window.MSInputMethodContext && document.documentMode && document.write('<script src="<?php echo get_theme_file_uri('node_modules/ie11-custom-properties/c.js'); ?>"><\x2fscript>');
+        //]]>
 	</script>
 
     <meta charset="<?php bloginfo( 'charset' ); ?>" />

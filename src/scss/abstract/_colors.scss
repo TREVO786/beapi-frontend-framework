@@ -20,6 +20,16 @@ $maincolor: #F1E25B;
 $textcolor: #333;
 
 /**
+* Dynamic color
+*/
+:root{
+  --themeColor:#{$maincolor};
+}
+
+$dynamiccolor: var(--themeColor);
+
+
+/**
  * Light and Dark colors
  */
 $lightcolor: #fff;

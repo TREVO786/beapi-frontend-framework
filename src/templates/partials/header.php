@@ -57,6 +57,10 @@
 		}
 		?>
 
+		<script type="text/javascript">
+          window.MSInputMethodContext && document.documentMode && document.write('<script src="../node_modules/ie11-custom-properties/ie11CustomProperties.js"><\x2fscript>');
+		</script>
+
 		<!-- jQuery from official WordPress Core -->
 		<script type="text/javascript" src="assets/js/vendor_async/jquery.js"></script>
 
