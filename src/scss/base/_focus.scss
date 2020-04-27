@@ -1,4 +1,5 @@
 html {
+	[tabindex],
 	a,
 	button,
 	input,
@@ -6,19 +7,45 @@ html {
 	textarea {
 		&:focus {
 			outline: 2px solid currentColor;
-			outline-offset: .5rem;
+			outline-offset: .25rem;
 		}
+	}
+	input[type="checkbox"],
+	input[type="radio"]{
+		&:focus {
+			& + label {
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 1px;
+					width: 100%;
+					height: 100%;
+					outline: 1px solid $darkcolor;
+					outline-offset: .25rem;
+					margin: 0;
+				}
+			}
+		}
+	}
+	input[type="submit"]{
+		outline: 1px solid $darkcolor;
+		outline-offset: .25rem;
 	}
 	[data-seo-container] {
 		&:focus-within {
 			outline-offset: .5rem;
 			outline: 1px solid currentColor;
+			figcaption{
+				opacity: 1;
+			}
 		}
 		*:focus {
 			outline: none;
 		}
 	}
 	&:not([data-whatintent="keyboard"]) {
+		[tabindex],
 		a,
 		button,
 		input,
@@ -27,6 +54,19 @@ html {
 			&:focus {
 				outline: none;
 			}
+		}
+		input[type="checkbox"],
+		input[type="radio"]{
+			&:focus {
+				& + label {
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+		input[type="submit"]{
+			outline: none;
 		}
 		[data-seo-container] {
 			&:focus-within,
