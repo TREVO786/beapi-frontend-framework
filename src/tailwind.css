@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply font-roboto text-h1 text-dark-blue;
+    }
+
+    h1 strong {
+        @apply text-purple;
+    }
+}
+
+@layer components {
+    .wp-block-button__link {
+        @apply inline-flex rounded py-3 px-4 font-bold;
+    }
+
+    .wp-block-buttons {
+        @apply flex gap-4;
+    }
+}

@@ -21,7 +21,7 @@ $entry-file-name: "editor";
 //@import "wp/gallery"; Enable if Gutenberg is not used
 
 @import "wp/wysiwyg";
-@import "wp/gutenberg";
+// @import "wp/gutenberg";
 
 // Backend Classic editor container
 .mce-content-body {

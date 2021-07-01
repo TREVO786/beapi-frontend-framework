@@ -11,6 +11,7 @@ use BEA\Theme\Framework\Services\Menu;
 use BEA\Theme\Framework\Services\Sidebar;
 use BEA\Theme\Framework\Services\Svg;
 use BEA\Theme\Framework\Services\Theme;
+use BEA\Theme\Framework\Services\Gutenberg;
 use BEA\Theme\Framework\Tools\Body_Class;
 use BEA\Theme\Framework\Tools\Template_Parts;
 
@@ -39,6 +40,7 @@ class Framework {
 		Acf::class,
 		Sidebar::class,
 		Menu::class,
+		Gutenberg::class,
 
 		// Services as Tools
 		Body_Class::class,

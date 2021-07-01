@@ -36,6 +36,7 @@ class Assets implements Service {
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 		add_action( 'wp_print_styles', [ $this, 'enqueue_styles' ] );
 		add_filter( 'stylesheet_uri', [ $this, 'stylesheet_uri' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, 'smartwp_remove_wp_block_library_css' ] );
 	}
 
 	/**
@@ -67,6 +68,7 @@ class Assets implements Service {
 
 		// CSS
 		wp_register_style( 'theme-style', get_stylesheet_uri(), [], $theme->get( 'Version' ) );
+		wp_register_style( 'tailwind', get_template_directory_uri() . '/dist/tailwind.css', [], $theme->get( 'Version' ) );
 	}
 
 	/**
@@ -77,12 +79,20 @@ class Assets implements Service {
 		$this->assets_tools->enqueue_script( 'scripts' );
 	}
 
+	//Remove Gutenberg Block Library CSS from loading on the frontend
+	public function smartwp_remove_wp_block_library_css() {
+		wp_dequeue_style( 'wp-block-library' );
+		wp_dequeue_style( 'wp-block-library-theme' );
+		wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+	}
+
 	/**
 	 * Enqueue the styles
 	 */
 	public function enqueue_styles(): void {
 		// CSS
 		$this->assets_tools->enqueue_style( 'theme-style' );
+		$this->assets_tools->enqueue_style( 'tailwind' );
 	}
 
 	/**
